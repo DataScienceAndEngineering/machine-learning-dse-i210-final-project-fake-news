@@ -2,7 +2,7 @@ import dropbox
 import pandas as pd
 
 # Dropbox access token
-DROPBOX_ACCESS_TOKEN = 'sl.ByVy_h6napjpde37Rn35XPaodYF7p0lI_n13l0ompdhuYgS81UwWFSrpRpwuVNh_ktxBMNbueFtUk-YPxD-K8C7siblHTsY09-qa5WybZfFE_eF7zjh4uQz4koilUYzNukfornsb_y1L'
+DROPBOX_ACCESS_TOKEN = 'sl.ByVh8odFyt4CaBJ2qq_bOUjewfR3X3Cbhx-2-QooBJaX9c3hTRCiR0Kw7G4MC35Hm82Xkb1-QdsmYqMukcHE7vJ2n00w4Rg-TcsVrjBLuAPGleU2L1TijWHKTwM9BhVflnlEvaxEAas3'
 # Initialize Dropbox client
 dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
 
