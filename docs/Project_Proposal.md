@@ -1,6 +1,6 @@
 # The Proposal of Fake News Detection
 
-😸 Authors: Abhina, Esther, Mahbuba, Zhongming
+😸 Authors: Abhina Premachandran Bindu, Esther, Mahbuba, Zhongming
 
 
 
