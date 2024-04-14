@@ -130,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# adding the config file with token
+config.py
