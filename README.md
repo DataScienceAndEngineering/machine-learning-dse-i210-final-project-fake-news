@@ -1,4 +1,4 @@
-ConfigWithYourProjectName
+Fake News Classification Project
 ==============================
 # DSEI210-S24-Final-Project
 Final Project for DSEI210-S23 Please fill in the Description
