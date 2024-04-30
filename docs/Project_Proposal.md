@@ -54,6 +54,7 @@ In our approach, the model evaluation consists of 3 phases.
 
 📊 Citations
 
-- [Dataset](https://github.com/several27/FakeNewsCorpus/releases/tag/v1.0)
+- [Dataset#1](https://github.com/several27/FakeNewsCorpus/releases/tag/v1.0)
+- [Dataset#2](https://figshare.com/articles/dataset/Fake_and_True_News_Dataset/13325198)
 - [Prior Research](https://www.geeksforgeeks.org/fake-news-detection-using-machine-learning)
 
