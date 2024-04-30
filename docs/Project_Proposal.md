@@ -54,7 +54,12 @@ In our approach, the model evaluation consists of 3 phases.
 
 📊 Citations
 
-- [Dataset#1](https://github.com/several27/FakeNewsCorpus/releases/tag/v1.0)
-- [Dataset#2](https://figshare.com/articles/dataset/Fake_and_True_News_Dataset/13325198)
+- [Dataset#1](https://figshare.com/articles/dataset/Fake_and_True_News_Dataset/13325198)
+> In this dataset have to be combined, namely fake news and true news. fake news collected from Kaggle and some true news collected form IEEE Data port. Therefore some true news data is required to optimize with the fake news. After that I have collected some true news from different trusted online sites. Finally I have concat the Fake and True news as a single dataset for the purpose to help the Researchers further if they want to research by taking this topic.
+  
+- [Dataset#2](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets?resource=download)
+> The dataset contains two types of articles: fake and real News. This dataset was collected from real world sources; the truthful articles were obtained by crawling articles from Reuters.com (News website). As for the fake news articles, they were collected from different sources. The fake news articles were collected from unreliable websites that were flagged by Politifact (a fact-checking organization in the USA) and Wikipedia. The dataset contains different types of articles on different topics, however, the majority of articles focus on political and World news topics.
+The dataset consists of two CSV files. The first file named “True.csv” contains more than 12,600 articles from reuter.com. The second file named “Fake.csv” contains more than 12,600 articles from different fake news outlet resources. Each article contains the following information: article title, text, type and the date the article was published on. To match the fake news data collected for kaggle.com, we focused mostly on collecting articles from 2016 to 2017. The data collected were cleaned and processed, however, the punctuations and mistakes that existed in the fake news were kept in the text.
+
 - [Prior Research](https://www.geeksforgeeks.org/fake-news-detection-using-machine-learning)
 
