@@ -131,5 +131,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# adding the config file with token
+# dont track the fake Fake and True datasets, as well as the config file
+Fake.csv
+True.csv
 config.py
