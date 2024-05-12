@@ -130,8 +130,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# dont track the fake Fake and True datasets, as well as the config file
-Fake.csv
-True.csv
-config.py
