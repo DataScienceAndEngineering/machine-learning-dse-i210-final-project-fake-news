@@ -1,4 +1,8 @@
-
+'''
+This python function is used for selecting the best Machine Learning classifer based on their accuracy scores. The parameters of the function are X_train,
+X_test,y_train,y_test which are train and test splits of the features and targets, provided the features to be cleaned and tokenized text.
+This function prints the accuracy scores of different ML classifiers from a list of 15 classifiers. 
+'''
 def model_selection(X_train,X_test,y_train,y_test):
     # calling all the ML classification algorithms imported above
     # importing the classification algorithms
