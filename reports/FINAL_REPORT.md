@@ -5,6 +5,8 @@
 
 Traditional methods of identifying and combating fake news are often insufficient due to the sheer volume and speed at which it is disseminated. Leveraging machine learning (ML) techniques offers a promising solution to this problem. ML models can be trained to detect patterns and features indicative of fake news, such as linguistic cues, source credibility, and dissemination patterns. By automating the detection process, ML can quickly and efficiently analyze vast amounts of data, far beyond the capacity of human fact-checkers.
 
+![banner](figures/banner.png)
+
 Our main objective is to identify a pair of high-accuracy vectorizer and classifier that can effectively recognize fake news. To achieve this, we compared popular libraries such as NLTK, spaCy, and Gensim for text preprocessing and vectorization, resulting in three different vectors. We then trained models using six different classifiers, creating a total of 18 combinations. From these, we selected the combination with the highest accuracy score as our output.
 
 Our secondary objective involves using spaCy and Gensim for entity recognition and topic modeling during text preprocessing to perform basic semantic analysis. Additionally, considering the interpretability challenges of the Word2Vec model, we used the TF-IDF model as a baseline. We employed SHAP and LIME to interpret feature importance, identifying the key terms that significantly influence the classifier.
@@ -32,7 +34,7 @@ Our team's main workflow is illustrated in the diagram below:
 ## Background
 Discuss other relevant work on solving this problem. Most of your references are here. Cite all sources. There is no specific formatting requirement for citations but be consistent.
 
-Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML. NLP is the challenging part, requiring us to review extensive Python documentation and perform comparative testing. We have consulted numerous sources, including:
+Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML. NLP is the challenging part, requiring us to review extensive Python documentation and perform comparative testing. We have consulted numerous sources, including:  
 [Nltk API](https://www.nltk.org/)  
 [spaCy API](https://spacy.io/api)  
 [Gensim API](https://radimrehurek.com/gensim/apiref.html#api-reference)  
@@ -40,7 +42,7 @@ Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML
 [FastText](https://fasttext.cc/)  
 [BERT Tutorial](https://huggingface.co/blog/bert-101)  
 
-Additionally, we researched SHAP/LIME to improve the interpretability of our results.
+Additionally, we researched SHAP/LIME to improve the interpretability of our results.  
 [SHAP](https://shap.readthedocs.io/en/latest/)  
 [LIME](https://github.com/marcotcr/lime)  
 
