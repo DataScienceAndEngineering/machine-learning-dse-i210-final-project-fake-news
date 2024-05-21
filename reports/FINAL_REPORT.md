@@ -33,19 +33,24 @@ Our team's main workflow is illustrated in the diagram below:
 Discuss other relevant work on solving this problem. Most of your references are here. Cite all sources. There is no specific formatting requirement for citations but be consistent.
 
 Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML. NLP is the challenging part, requiring us to review extensive Python documentation and perform comparative testing. We have consulted numerous sources, including:
-[Nltk API](https://www.nltk.org/)
-[spaCy API](https://spacy.io/api)
-[Gensim API](https://radimrehurek.com/gensim/apiref.html#api-reference)
-[Textblob](https://textblob.readthedocs.io/en/dev/)
-[FastText](https://fasttext.cc/)
-[BERT Tutorial](https://huggingface.co/blog/bert-101)
+[Nltk API](https://www.nltk.org/)  
+[spaCy API](https://spacy.io/api)  
+[Gensim API](https://radimrehurek.com/gensim/apiref.html#api-reference)  
+[Textblob](https://textblob.readthedocs.io/en/dev/)  
+[FastText](https://fasttext.cc/)  
+[BERT Tutorial](https://huggingface.co/blog/bert-101)  
 
 Additionally, we researched SHAP/LIME to improve the interpretability of our results.
-[SHAP](https://shap.readthedocs.io/en/latest/)
-[LIME](https://github.com/marcotcr/lime)
+[SHAP](https://shap.readthedocs.io/en/latest/)  
+[LIME](https://github.com/marcotcr/lime)  
 
 ## Data
 Where you go the data. Describe the variables. You can begin discussing the data wrangling, and data cleaning. Some EDA may happen here. This includes your data source (including URL if applicable), any articles behind the data source.
+
+[Data Source](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets?resource=download) is from Kaggle. The dataset contains two types of articles: fake and real News. This dataset was collected from real world sources; the truthful articles were obtained by crawling articles from Reuters.com (News website). As for the fake news articles, they were collected from different sources. The fake news articles were collected from unreliable websites that were flagged by Politifact (a fact-checking organization in the USA) and Wikipedia. The dataset contains different types of articles on different topics, however, the majority of articles focus on political and World news topics.
+The dataset consists of two CSV files. The first file named “True.csv” contains more than 12,600 articles from reuter.com. The second file named “Fake.csv” contains more than 12,600 articles from different fake news outlet resources. Each article contains the following information: article title, text, type and the date the article was published on. To match the fake news data collected for kaggle.com, we focused mostly on collecting articles from 2016 to 2017. The data collected were cleaned and processed, however, the punctuations and mistakes that existed in the fake news were kept in the text.
+
+[EDA Visualization](figures/EDA-1.png)
 
 
 ## Methods
