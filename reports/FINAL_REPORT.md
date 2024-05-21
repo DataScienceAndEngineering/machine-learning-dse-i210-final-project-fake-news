@@ -52,10 +52,10 @@ The dataset consists of two CSV files. The first file named “True.csv” conta
 
 Sample Data: 
 
-| title | text | subject | date | type |
-| ----------- | ----------- |
-| As U.S. budget...| The head of a conservative Republican faction... | politicsNews | 12/31/2017 | TRUE |
-| Donald Trump Sends... | He had to give a shout out to his enemies... | News| 12/31/2017 | FAKE|
+| title                 | text                                             | subject      | date       | type |
+| --------------------- | ------------------------------------------------ | ------------ | ---------- | ---- |
+| As U.S. budget...     | The head of a conservative Republican faction... | politicsNews | 12/31/2017 | TRUE |
+| Donald Trump Sends... | He had to give a shout out to his enemies...     | News         | 12/31/2017 | FAKE |
 
 
 After data preprocessing, we can observe some data features:
