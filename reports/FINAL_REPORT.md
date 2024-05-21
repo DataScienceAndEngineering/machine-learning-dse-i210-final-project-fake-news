@@ -15,6 +15,8 @@ State your data and research question(s). Indicate why it is important. Describe
 
 The terms "fake news" and "misinformation" have seen a massive uptick in use within the past couple of years. The phenomenon of false information being spread throughout many forms of media (particularly the Internet) has caused concern for its impacts on health and wellness safety, political distrust, social divisiveness, and a decrese in 
 
+![workflow](figures/workflow.png)
+
 ## Background
 Discuss other relevant work on solving this problem. Most of your references are here. Cite all sources. There is no specific formatting requirement for citations but be consistent.
 
