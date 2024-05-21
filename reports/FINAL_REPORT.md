@@ -50,7 +50,22 @@ Where you go the data. Describe the variables. You can begin discussing the data
 [Data Source](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets?resource=download) is from Kaggle. The dataset contains two types of articles: fake and real News. This dataset was collected from real world sources; the truthful articles were obtained by crawling articles from Reuters.com (News website). As for the fake news articles, they were collected from different sources. The fake news articles were collected from unreliable websites that were flagged by Politifact (a fact-checking organization in the USA) and Wikipedia. The dataset contains different types of articles on different topics, however, the majority of articles focus on political and World news topics.
 The dataset consists of two CSV files. The first file named “True.csv” contains more than 12,600 articles from reuter.com. The second file named “Fake.csv” contains more than 12,600 articles from different fake news outlet resources. Each article contains the following information: article title, text, type and the date the article was published on. To match the fake news data collected for kaggle.com, we focused mostly on collecting articles from 2016 to 2017. The data collected were cleaned and processed, however, the punctuations and mistakes that existed in the fake news were kept in the text.
 
-[EDA Visualization](figures/EDA-1.png)
+Sample Data: 
+
+| title | text | subject | date | type |
+| ----------- | ----------- |
+| As U.S. budget...| The head of a conservative Republican faction... | politicsNews | 12/31/2017 | TRUE |
+| Donald Trump Sends... | He had to give a shout out to his enemies... | News| 12/31/2017 | FAKE|
+
+
+After data preprocessing, we can observe some data features:
+- In terms of the amount of labels, our dataset is a very balanced one.
+- The content length for both true and fake news are 300 tokens on average.
+- The null value takes up 1%, which should be dropped instead of imputation.
+- The news fall into 6 categories.
+- We will only take column 'text' and 'type' into the NLP. 
+
+![EDA Visualization](figures/EDA-1.png)
 
 
 ## Methods
