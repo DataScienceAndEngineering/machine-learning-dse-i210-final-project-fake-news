@@ -32,6 +32,18 @@ Our team's main workflow is illustrated in the diagram below:
 ## Background
 Discuss other relevant work on solving this problem. Most of your references are here. Cite all sources. There is no specific formatting requirement for citations but be consistent.
 
+Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML. NLP is the challenging part, requiring us to review extensive Python documentation and perform comparative testing. We have consulted numerous sources, including:
+[Nltk API](https://www.nltk.org/)
+[spaCy API](https://spacy.io/api)
+[Gensim API](https://radimrehurek.com/gensim/apiref.html#api-reference)
+[Textblob](https://textblob.readthedocs.io/en/dev/)
+[FastText](https://fasttext.cc/)
+[BERT Tutorial](https://huggingface.co/blog/bert-101)
+
+Additionally, we researched SHAP/LIME to improve the interpretability of our results.
+[SHAP](https://shap.readthedocs.io/en/latest/)
+[LIME](https://github.com/marcotcr/lime)
+
 ## Data
 Where you go the data. Describe the variables. You can begin discussing the data wrangling, and data cleaning. Some EDA may happen here. This includes your data source (including URL if applicable), any articles behind the data source.
 
