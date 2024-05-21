@@ -15,6 +15,18 @@ State your data and research question(s). Indicate why it is important. Describe
 
 The terms "fake news" and "misinformation" have seen a massive uptick in use within the past couple of years. The phenomenon of false information being spread throughout many forms of media (particularly the Internet) has caused concern for its impacts on health and wellness safety, political distrust, social divisiveness, and a decrese in 
 
+The dataset, obtained from Kaggle, focuses on real and fake news and includes four features: news title, news content, news category, and creation date. The labels are "true" and "fake." The goal of our research project is to extract data features using NLP techniques and then combine them with ML to find an effective classifier, which we will validate using recent real and fake news.
+
+To achieve this, we broke down the research project into core issues:
+
+- Vectorization is a key challenge. The dataset consists of 40,000 rows, with each row's news content averaging 300 tokens. Extracting features from such a large dataset is problematic. The traditional models we are familiar with, such as BoW and TF-IDF, are only effective for small datasets. For the larger dataset, we used Word2Vec and Doc2Vec.
+
+- Choosing the classifier. We used logistic regression as a baseline and experimented with Decision Tree, SVM, and ensemble algorithms like Random Forest and Gradient Boosting. Although we did not explore every possible model, we refrain from concluding that we used the best models. Nevertheless, the selected models achieved an accuracy of approximately 90%.
+
+- Interpreting the results is challenging. Text analysis is notoriously difficult to interpret, especially after word embedding when all words are vectorized. Determining which words significantly impact the label is challenging. Therefore, we used SHAP and LIME methods to interpret the results.
+
+Our team's main workflow is illustrated in the diagram below:
+
 ![workflow](figures/workflow.png)
 
 ## Background
