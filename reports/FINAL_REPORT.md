@@ -149,6 +149,7 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 <p>Abhina Premachandran Bindu - I did substantial work on researching on model explainability and implementing it for our project. Initially, I did a preliminary analysis of the data and build a classifier using nltk library. I also used gensim library to preprocess data and to build word2vec word embedding as our group decided to focus on different nlp libraries. I also build a python libary that can be imported to run a loop that measures the test and validation accuracies of each model to select the best one.  
 </p>
 
+<p> Esther Aruti - I contributed to exploring the dataset the baseline NLTK, and also tokenizing and lemmatizing with spaCy. Additionally I did the POS tagging and Entity recognition analysis and visualizations. Finally, I created the LIME analysis for model interpretability. I also largely contributed to creating the presentation powerpoint
 
 ## Bibliography
 
