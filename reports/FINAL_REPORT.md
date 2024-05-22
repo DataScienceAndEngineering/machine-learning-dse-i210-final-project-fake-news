@@ -76,7 +76,7 @@ How did you take your data and set up the problem? Describe things like normaliz
   Our main goal was to build the best Machine Learning classifier that can accurately classify the data, which consists of news documents as real or fake. The process was quite challenging as we are dealing with complex text data. Inorder to accomplish this goal, our tasks were mainly focused on Data cleaning and Exploration, Text preprocessing using various NLP libraries, Feature extraction and building word vectors, Model building, training, and testing, Model Evaluation and Model Explainability.
 </p>
 <p>
-  After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were abscent in True news data. 
+  After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were absent in True news data. 
 </p>
 
 **Word Embedding.**   
@@ -102,6 +102,20 @@ For this binary classification, we tried multiple models, from weak learners to 
 	- Support Vector Machine(svm).   
 	- Random Forest(rf).  
 	- Gradient Boosting(gb).  
+
+ **Model Explainability**
+ <p>
+	 we used three different methods of model explainability:
+1. plot_tree function of decision tree to visualize the performance of the model as well as to identify the important features. 
+![DecionTree plot](figures/tree_plot_model_explainability.png)
+	 The above tree visualization of the classifier indicates that the classifier uses 'said' feature as one of the main feature to decide whether the text is fake or real. In the next level, 'minist' and 'via' are used to split the data into the respective classes based on certain threshold values for the features.
+![Feature_importance](figures/important_features.png)
+2. SHAP will be used for global interpretability, and is well suited for complex tasks to provide a list of feature contributions
+3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
+
+
+
+ </p>
 
 ## Evaluation
 Here will to show your different models’ performance. It is particularly useful to show multiple metrics and things like ROC curves (for binary classifiers). Make sure it is clearly not just what the score is but for which instances in the data one has the largest errors (in a regression), or just sample examples miss-classified. Make an attempt to interpret the parameters of the model to understand what was useful about the input data. Method comparison and sensitivity analyses are absolutely CRUCIAL to good scientific work. To that end, you MUST compare at least 2 different methods from class in answering your scientific questions. It is important to report what you tried but do so SUCCINCTLY.
