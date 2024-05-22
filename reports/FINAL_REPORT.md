@@ -146,6 +146,9 @@ It was a great journey of analyzing a complex text data and retrieving insights.
 
 Using the number and size of GitHub commits by author (bar graph), and the git hub visualizations of when the commits occurred. Using these measures each person should self-report how many code-hours of their work are visible in the repo with 2-3 sentences listing their contribution. Do not report any code hours that cannot be traced to commits. If you spend hours on a 2-line change of code or side-reading you did, you cannot report. If you do searches or research for the project that does not result in code, you must create notes in a markdown file (eg. in the project wiki) and the notes should be commensurate with the amount of work reported. Notes cannot be simply copy-pasted from elsewhere (obviously).
 
+<p>Abhina Premachandran Bindu - I did substantial work on researching on model explainability and implementing it for our project. Initially, I did a preliminary analysis of the data and build a classifier using nltk library. I also used gensim library to preprocess data and to build word2vec word embedding as our group decided to focus on different nlp libraries. I also build a python libary that can be imported to run a loop that measures the test and validation accuracies of each model to select the best one.  
+</p>
+
 
 ## Bibliography
 
