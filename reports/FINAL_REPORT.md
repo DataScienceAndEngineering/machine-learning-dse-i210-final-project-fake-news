@@ -79,6 +79,20 @@ How did you take your data and set up the problem? Describe things like normaliz
   After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were abscent in True news data. 
 </p>
 
+**Word Embedding.**   
+We tried three vectorization models, such as tf-idf, word2vec and doc2vec.   
+	- tf-idf is highly interpretable and good for small dataset. we use sklearn api.   
+	- Word2vec takes the word orders into consideration, compares the similarity of words and runs fast for last dataset due to lower dimensionality. We tried both spaCy and gensim api.  
+	- Doc2vec takes the whole content into analysis, finds similarity between contents and comes up with a fixed length vector, especially good for topic modeling. We tried gensim api.  
+
+However, unlike tf-idf, the word2vec and doc2vec are not as easy to interprete and evaluate. The accuracy is highly related to the quality of corpora. In order to remove the bias of corpora and run it faster, we make use of spaCy and gensim pre-trained models. These models are well trained with wide-topic and super large dataset.   
+	- spacy/en_core_web_sm  
+	- gensim/word2vec-google-news-300  
+ 
+In this step, we performed feature extraction with different models and get a number of large matrice as input for the machine learning models.
+
+**Model Training**  
+
 
 ## Evaluation
 Here will to show your different models’ performance. It is particularly useful to show multiple metrics and things like ROC curves (for binary classifiers). Make sure it is clearly not just what the score is but for which instances in the data one has the largest errors (in a regression), or just sample examples miss-classified. Make an attempt to interpret the parameters of the model to understand what was useful about the input data. Method comparison and sensitivity analyses are absolutely CRUCIAL to good scientific work. To that end, you MUST compare at least 2 different methods from class in answering your scientific questions. It is important to report what you tried but do so SUCCINCTLY.
