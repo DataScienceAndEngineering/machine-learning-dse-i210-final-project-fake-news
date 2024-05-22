@@ -127,6 +127,7 @@ From the waterfall plot above, an idea on the features that the model relies on 
 
 3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
 
+![LIME](figures/LIME.png)
  </p>
 
 ## Evaluation
@@ -165,9 +166,17 @@ If there are minor results and graphs that you think should be included, put the
 
 **Topic Modeling**
 
-By using Gensim Ldamodel, it's convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to our dataset.  
+By using Gensim Ldamodel, it's convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to both fake and true articles split into two topics.  
 From the left panel, it's easy to observe the similarity of topics. From the right panel, we can observe the top ranking key word for each topic ordered by frequency.  
 
-![topic_modeling](figures/topic_modeling.png)
+![faketrue_topic](reports/faketrue_topic.gif)
+
+Here we show topic modeling on only the fake news split into four different topics. This would represent the main four topics found in fake articles.
+
+![fake_topic](reports/fake_topic.gif)
+
+Now, we can also look at topic modeling done on true news, also split into four topics. These would represent the four main topics in true articles.
+
+![true_topic](reports/true_topic.gif)
 
 
