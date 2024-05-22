@@ -153,7 +153,14 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 
 
 ## Bibliography
-References should appear at the end of the report/notebook. Again, no specific format is required but be consistent.
+
+1. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7541057/
+2. https://cits.ucsb.edu/fake-news/brief-history
+3. https://spacy.io/api
+4. https://radimrehurek.com/gensim/auto_examples/index.html#documentation
+5. https://www.openlayer.com/blog/post/understanding-lime-in-5-steps#
+6. https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability#
+
 
 
 ## Appendix
