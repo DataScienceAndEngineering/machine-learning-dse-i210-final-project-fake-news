@@ -132,11 +132,11 @@ From the waterfall plot above, an idea on the features that the model relies on 
 To evaluate the classifier, we run classification report and compare the accuracy score. With the above mentioned 20 pairs, we could only get 15 pairs in the end, as some caused a negative result. We compare the 15 pairs and find the spaCy-based W2V-matrix plus SVM show the best accuracy score. Below are the bar chart of accuracy score.
 
 ![accuracy](figures/accuracy.png)  
----  
+
 
 ## Conclusion
   
-It was a great journey of analyzing a complex text data and retrieving insights. We as a team were able to grow our Machine Learning skills through implimenting various ML as well as other various data analysis techniques. The data we used was pretty large with around 44,000 rows and each data point in the 'text' column- the feature we used for the analysis was itself much large in size, adding complexity to the data. We experimented with a lot of text processing libraries and model explaining tools and libraries, which was very challenging at first, because we weren't exposed to those before. Finally, after immense research and analysis, we found that spaCy word2vec has the best result with SVM and RandomForest, and runs faster with an accuracy score of 96%. Also, using various model explainability techniques we were able to identify the working of classifier and the important features. Using Spacey, we were able to identify special words that were unique to fake news which included profanities. 
+It was a great journey of analyzing a complex text data and retrieving insights. We as a team were able to grow our Machine Learning skills through implimenting various ML as well as other various data analysis techniques. The data we used was pretty large with around 44,000 rows and each data point in the 'text' column- the feature we used for the analysis was itself much large in size, adding complexity to the data. We experimented with a lot of text processing libraries and model explaining tools and libraries, which was very challenging at first, because we weren't exposed to those before. Finally, after immense research and analysis, we found that spaCy word2vec has the best result with SVM and RandomForest, and runs faster with an accuracy score of 96%. Also, using various model explainability techniques we were able to identify the working of classifier and the important features. Using spaCy, we were able to identify special words that were unique to fake news which included profanities. 
 
 
 ## Attribution
@@ -156,3 +156,12 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 
 ## Appendix
 If there are minor results and graphs that you think should be included, put them at the end. Do not include anything without an explanation. No random graphs just for padding!! However, let’s say you did a 50 state analysis of poverty and demographics, and your report focused on the 5 most interesting states, for completeness you could include all in an appendix. Be sure though to provide some (very short) discussion with each figure/code/result.
+
+**Topic Modeling**
+
+By using Gensim Ldamodel, it's convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to our dataset.  
+From the left panel, it's easy to observe the similarity of topics. From the right panel, we can observe the top ranking key word for each topic ordered by frequency.  
+
+![topic_modeling](figures/topic_modeling.png)
+
+
