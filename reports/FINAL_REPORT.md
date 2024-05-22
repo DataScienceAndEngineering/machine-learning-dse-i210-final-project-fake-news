@@ -107,8 +107,10 @@ For this binary classification, we tried multiple models, from weak learners to 
  <p>
 	 we used three different methods of model explainability:
 1. plot_tree function of decision tree to visualize the performance of the model as well as to identify the important features. 
+
 ![DecionTree plot](figures/tree_plot_model_explainability.png)
 	 The above tree visualization of the classifier indicates that the classifier uses 'said' feature as one of the main feature to decide whether the text is fake or real. In the next level, 'minist' and 'via' are used to split the data into the respective classes based on certain threshold values for the features.
+
 ![Feature_importance](figures/important_features.png)
 2. SHAP will be used for global interpretability, and is well suited for complex tasks to provide a list of feature contributions
 3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
