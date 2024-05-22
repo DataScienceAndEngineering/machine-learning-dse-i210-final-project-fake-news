@@ -30,29 +30,33 @@ Our team's main workflow is illustrated in the diagram below:
 
 ## Background
 
-Our dataset is a labeled NLP problem. Therefore, the main focus is on NLP and ML. NLP is the challenging part, requiring us to review extensive Python documentation and perform comparative testing. We have consulted numerous sources, including:  
-[Nltk API](https://www.nltk.org/)  
-[spaCy API](https://spacy.io/api)  
-[Gensim API](https://radimrehurek.com/gensim/apiref.html#api-reference)  
-[Textblob](https://textblob.readthedocs.io/en/dev/)  
-[FastText](https://fasttext.cc/)  
-[BERT Tutorial](https://huggingface.co/blog/bert-101)  
+There are two main approaches for fake news detection with machine learning, depending on the availability of labeled data:  
 
-Additionally, we researched SHAP/LIME to improve the interpretability of our results.  
-[SHAP](https://shap.readthedocs.io/en/latest/)  
-[LIME](https://github.com/marcotcr/lime)  
+**Supervised Learning**: This is the most common approach. Here's how it works:  
+- Data Preparation: Massive amounts of text data are collected from news articles, social media posts, etc. This data is then labeled as "real" or "fake" by human experts.
+- Feature Engineering: The text data is analyzed to extract key features. This could involve things like word usage, sentiment analysis, presence of ALL CAPS, exclamation points, etc.
+- Model Training: Machine learning algorithms like Support Vector Machines (SVMs) or Logistic Regression are trained on the labeled data. The model learns to identify patterns that differentiate real and fake news based on the extracted features.
+- Detection: Once trained, the model can be used to analyze new, unseen content. It assigns a probability of whether the new content is real or fake news based on the patterns it learned.
+
+**Unsupervised Learning**: This approach is useful when labeled data is scarce. Here's the gist: 
+- Clustering Algorithms: The data is analyzed to identify inherent groupings (clusters) within the text. These clusters may represent different types of content, like factual news articles, political commentary, or rumor mills.
+- Anomaly Detection: By understanding the characteristics of each cluster, the algorithm can flag content that falls outside the norm and might be suspicious, potentially fake news.
+- Both approaches have their advantages and disadvantages. Supervised learning offers higher accuracy, but requires a lot of labeled data which can be expensive and time-consuming to create. Unsupervised learning doesn't need labeled data, but it might be less accurate and require human intervention to interpret the flagged content.
+
+Since there are labels in our dataset, we will follow the supervised learning methodology. But we will also performance unsupervised learning, such as sentiment analysis and topic modeling to view our data from different angles. 
+
 
 ## Data
 
-[Data Source](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets?resource=download) is from Kaggle. The dataset contains two types of articles: fake and real News. This dataset was collected from real world sources; the truthful articles were obtained by crawling articles from Reuters.com (News website). As for the fake news articles, they were collected from different sources. The fake news articles were collected from unreliable websites that were flagged by Politifact (a fact-checking organization in the USA) and Wikipedia. The dataset contains different types of articles on different topics, however, the majority of articles focus on political and World news topics.
+[Data Source](https://www.kaggle.com/datasets/emineyetm/fake-news-detection-datasets?resource=download) is from Kaggle. The dataset contains two types of articles: fake and real News. This dataset was collected from real world sources; the truthful articles were obtained by crawling articles from Reuters.com (News website). As for the fake news articles, they were collected from different sources. The fake news articles were collected from unreliable websites that were flagged by Politifact (a fact-checking organization in the USA) and Wikipedia. The dataset contains different types of articles on different topics, however, the majority of articles focus on political and World news topics.  
 The dataset consists of two CSV files. The first file named “True.csv” contains more than 12,600 articles from reuter.com. The second file named “Fake.csv” contains more than 12,600 articles from different fake news outlet resources. Each article contains the following information: article title, text, type and the date the article was published on. To match the fake news data collected for kaggle.com, we focused mostly on collecting articles from 2016 to 2017. The data collected were cleaned and processed, however, the punctuations and mistakes that existed in the fake news were kept in the text.
 
 Sample Data: 
 
-| title                 | text                                             | subject      | date       | type |
-| --------------------- | ------------------------------------------------ | ------------ | ---------- | ---- |
-| As U.S. budget...     | The head of a conservative Republican faction... | politicsNews | 12/31/2017 | TRUE |
-| Donald Trump Sends... | He had to give a shout out to his enemies...     | News         | 12/31/2017 | FAKE |
+| title                 | text                                             | subject      | date       | type    |
+| --------------------- | ------------------------------------------------ | ------------ | ---------- | ------- |
+| As U.S. budget...     | The head of a conservative Republican faction... | politicsNews | 12/31/2017 | TRUE    |
+| Donald Trump Sends... | He had to give a shout out to his enemies...     | News         | 12/31/2017 | FAKE    |
 
 
 After data preprocessing, we can observe some data features:
@@ -123,8 +127,6 @@ From the waterfall plot above, an idea on the features that the model relies on 
 
 3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
 
-
-
  </p>
 
 ## Evaluation
@@ -139,7 +141,8 @@ To evaluate the classifier, we run classification report and compare the accurac
 It was a great journey of analyzing a complex text data and retrieving insights. We as a team were able to grow our Machine Learning skills through implimenting various ML as well as other various data analysis techniques. The data we used was pretty large with around 44,000 rows and each data point in the 'text' column- the feature we used for the analysis was itself much large in size, adding complexity to the data. We experimented with a lot of text processing libraries and model explaining tools and libraries, which was very challenging at first, because we weren't exposed to those before. Finally, after immense research and analysis, we found that spaCy word2vec has the best result with SVM and RandomForest, and runs faster with an accuracy score of 96%. Also, using various model explainability techniques we were able to identify the working of classifier and the important features. Using spaCy, we were able to identify special words that were unique to fake news which included profanities. 
 
 
-## Attribution
+## Attribution  
+
 Using the number and size of GitHub commits by author (bar graph), and the git hub visualizations of when the commits occurred. Using these measures each person should self-report how many code-hours of their work are visible in the repo with 2-3 sentences listing their contribution. Do not report any code hours that cannot be traced to commits. If you spend hours on a 2-line change of code or side-reading you did, you cannot report. If you do searches or research for the project that does not result in code, you must create notes in a markdown file (eg. in the project wiki) and the notes should be commensurate with the amount of work reported. Notes cannot be simply copy-pasted from elsewhere (obviously).
 
 
@@ -151,7 +154,10 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 4. https://radimrehurek.com/gensim/auto_examples/index.html#documentation
 5. https://www.openlayer.com/blog/post/understanding-lime-in-5-steps#
 6. https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability#
-
+7. https://www.nltk.org/
+8. https://textblob.readthedocs.io/en/dev/
+9. https://fasttext.cc/
+10. https://huggingface.co/blog/bert-101
 
 
 ## Appendix
