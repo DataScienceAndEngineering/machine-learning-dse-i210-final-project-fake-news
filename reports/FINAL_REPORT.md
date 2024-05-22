@@ -112,8 +112,18 @@ For this binary classification, we tried multiple models, from weak learners to 
 	 The above tree visualization of the classifier indicates that the classifier uses 'said' feature as one of the main feature to decide whether the text is fake or real. In the next level, 'minist' and 'via' are used to split the data into the respective classes based on certain threshold values for the features.
 
 ![Feature_importance](figures/important_features.png)
-2. SHAP will be used for global interpretability, and is well suited for complex tasks to provide a list of feature contributions
-3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
+	 The bar chart on the feature importance also indicates that the 'said' and 'via' features have substantial significance in influencing the model decision compared to other features. 
+
+2. SHAP will is used for both global and local interpretability, and is well suited for complex tasks to provide a list of feature contributions.  It shows the class prediction score for each feature and the final class is selected based on the majority score. The class 1 indcates that it is real and 0 indicates that it is fake. 
+![shap_local_explainability](figures/shap_local_explainability.png)
+
+From the waterfall plot above, an idea on the features that the model relies on class prediction is evident. The 6th indexed test data shows that the features 'said','via', and 'washington' predicts the data as real. These are some of the important features whose prediction score is used by the model for prediction.
+
+![shap_global_explainability](figures/shap_global_explainability.png)
+
+ The above summary plot picturizes how the model works in a global scale. It shows that 'said' and 'via' are two important word features that the model heavily relies on deciding which class a data belongs to.
+
+4. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
 
 
 
