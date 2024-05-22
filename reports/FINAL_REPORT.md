@@ -108,9 +108,12 @@ Here will to show your different models’ performance. It is particularly usefu
 
 To evaluate the classifier, we run classification report and compare the accuracy score. With the above mentioned 20 pairs, we could only get 15 pairs in the end, as some caused a negative result. We compare the 15 pairs and find the spaCy-based W2V-matrix plus SVM show the best accuracy score. Below are the bar chart of accuracy score.
 
-![accuracy-1](figures/accuracy-1.png)  
-![accuracy-2](figures/accuracy-2.png)  
-![accuracy-3](figures/accuracy-.png)  
+![accuracy-1](figures/accuracy-1.PNG)  
+---
+![accuracy-2](figures/accuracy-2.PNG)  
+---
+![accuracy-3](figures/accuracy-3.PNG)  
+---
 
 ## Conclusion
 Summarize how well your solution works Characterize how robust you think the results are (did you have enough data?) Try for interpretation of what the model found (what variables were useful, what was not)? Try to avoid describing what you would do if you had more time. If you have to make a statement about “future work” limit it to one short statement.
