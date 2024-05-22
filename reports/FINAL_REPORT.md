@@ -66,7 +66,7 @@ After data preprocessing, we can observe some data features:
 
 
 ## Methods
-How did you take your data and set up the problem? Describe things like normalization, feature selection, the models you chose. In this section, you may have EDA and graphs showing the exploration of hyper-parameters. Note: Use graphs to illustrate interesting relationships that are important to your final analyses. DO NOT just show a bunch of graphs because you can. You should label and discuss every graph you include. There is no required number to include. The graphs should help us understand your analysis process and illuminate key features of the data.
+
 <p>
   Our main goal was to build the best Machine Learning classifier that can accurately classify the data, which consists of news documents as real or fake. The process was quite challenging as we are dealing with complex text data. Inorder to accomplish this goal, our tasks were mainly focused on Data cleaning and Exploration, Text preprocessing using various NLP libraries, Feature extraction and building word vectors, Model building, training, and testing, Model Evaluation and Model Explainability.
 </p>
@@ -74,7 +74,7 @@ How did you take your data and set up the problem? Describe things like normaliz
   After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were absent in True news data. 
 </p>
 
-**Word Embedding.**   
+**Word Embedding**   
 We tried three vectorization models, including tf-idf, word2vec and doc2vec.   
 	- tf-idf is highly interpretable and good for small dataset. we use sklearn api.   
 	- Word2vec takes the word orders into consideration, measures the similarity of words and runs fast for large dataset due to lower dimensionality. We tried both spaCy and gensim api.  
@@ -131,12 +131,8 @@ From the waterfall plot above, an idea on the features that the model relies on 
 
 To evaluate the classifier, we run classification report and compare the accuracy score. With the above mentioned 20 pairs, we could only get 15 pairs in the end, as some caused a negative result. We compare the 15 pairs and find the spaCy-based W2V-matrix plus SVM show the best accuracy score. Below are the bar chart of accuracy score.
 
-![accuracy-1](figures/accuracy-1.PNG)  
----
-![accuracy-2](figures/accuracy-2.PNG)  
----
-![accuracy-3](figures/accuracy-3.PNG)  
----
+![accuracy](figures/accuracy.png)  
+---  
 
 ## Conclusion
   
