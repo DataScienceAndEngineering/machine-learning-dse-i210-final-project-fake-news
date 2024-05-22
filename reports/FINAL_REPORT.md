@@ -172,15 +172,17 @@ If there are minor results and graphs that you think should be included, put the
 By using Gensim Ldamodel, it's convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to both fake and true articles split into two topics.  
 From the left panel, it's easy to observe the similarity of topics. From the right panel, we can observe the top ranking key word for each topic ordered by frequency.  
 
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/faketrue_topic.gif))
+
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/faketrue_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
 
 Here we show topic modeling on only the fake news split into four different topics. This would represent the main four topics found in fake articles.
 
-![]([reports/fake_topic.gif](https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/fake_topic.gif))
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/fake_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
+
 
 Now, we can also look at topic modeling done on true news, also split into four topics. These would represent the four main topics in true articles.
 
-![]([reports/true_topic.gif](https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/true_topic.gif))
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/true_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
 
 
 
