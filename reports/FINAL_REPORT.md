@@ -103,6 +103,7 @@ For this binary classification, we tried multiple models, from weak learners to 
 	- Gradient Boosting(gb).  
  Out of all the combinations trained, we found that spaCy word2vec has the best result with SVM and RandomForest, and runs faster.
 
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/model_selection.jpg" width="800"/>
 
  **Model Explainability**
  <p>
@@ -174,16 +175,16 @@ By using Gensim Ldamodel, it's convenient to calculate the similarity of documen
 From the left panel, it's easy to observe the similarity of topics. From the right panel, we can observe the top ranking key word for each topic ordered by frequency.  
 
 
-<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/faketrue_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/faketrue_topic.gif" width="800"/>
 
 Here we show topic modeling on only the fake news split into four different topics. This would represent the main four topics found in fake articles.
 
-<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/fake_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/fake_topic.gif" width="800"/>
 
 
 Now, we can also look at topic modeling done on true news, also split into four topics. These would represent the four main topics in true articles.
 
-<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/true_topic.gif" alt="Databay showcase gif" title="Databay showcase gif" width="800"/>
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/true_topic.gif" width="800"/>
 
 
 
