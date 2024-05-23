@@ -173,8 +173,7 @@ Zhongming Wu - I was involved in Data Cleaning, Text Preprocessing, and Feature 
 10. https://huggingface.co/blog/bert-101
 
 
-## Appendix
-If there are minor results and graphs that you think should be included, put them at the end. Do not include anything without an explanation. No random graphs just for padding!! However, let’s say you did a 50 state analysis of poverty and demographics, and your report focused on the 5 most interesting states, for completeness you could include all in an appendix. Be sure though to provide some (very short) discussion with each figure/code/result.
+## Appendix  
 
 **Topic Modeling**
 
