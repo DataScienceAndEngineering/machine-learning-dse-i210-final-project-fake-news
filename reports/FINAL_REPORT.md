@@ -154,7 +154,10 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 <p>Abhina Premachandran Bindu - I did substantial work on researching on model explainability and implementing it for our project. Initially, I did a preliminary analysis of the data and build a classifier using nltk library. I also used gensim library to preprocess data and to build word2vec word embedding as our group decided to focus on different nlp libraries. I also build a python libary that can be imported to run a loop that measures the test and validation accuracies of each model to select the best one.  
 </p>
 
-<p> Esther Aruti - I contributed to exploring the dataset the baseline NLTK, and also tokenizing and lemmatizing with spaCy. Additionally I did the POS tagging and Entity recognition analysis and visualizations. Finally, I created the LIME analysis for model interpretability. I also largely contributed to creating the presentation powerpoint
+<p> Esther Aruti - I contributed to exploring the dataset the baseline NLTK, and also tokenizing and lemmatizing with spaCy. Additionally I did the POS tagging and Entity recognition analysis and visualizations. Finally, I created the LIME analysis for model interpretability. I also largely contributed to creating the presentation powerpoint  
+
+Zhongming Wu - I was involved in Data Cleaning, Text Preprocessing, and Feature Extraction, dedicating most of my time to the latter. In addition to using NLTK, I explored word embedding algorithms, experimenting with several pre-trained models in spaCy, as well as gensim’s Word2Vec and Doc2Vec models. Although I couldn't get BERT to run successfully, the matrices from Word2Vec and Doc2Vec preserved more features and had lower dimensions compared to TF-IDF, providing a solid foundation for machine learning model training. I also used topic modeling with the gensim Doc2Vec model to interpret the dataset through topics and keywords.  
+
 
 ## Bibliography
 
