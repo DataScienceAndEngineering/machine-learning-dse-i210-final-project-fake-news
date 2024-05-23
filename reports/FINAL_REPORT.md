@@ -78,6 +78,10 @@ After data preprocessing, we can observe some data features:
   After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were absent in True news data. 
 </p>
 
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/fixed_pos.png" width="800"/>
+
+<img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/fixed_entity.png" width="800"/>
+
 **Word Embedding**   
 We tried three vectorization models, including tf-idf, word2vec and doc2vec.   
 	- tf-idf is highly interpretable and good for small dataset. we use sklearn api.   
