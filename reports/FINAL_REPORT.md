@@ -158,6 +158,10 @@ Using the number and size of GitHub commits by author (bar graph), and the git h
 
 Zhongming Wu - I was involved in Data Cleaning, Text Preprocessing, and Feature Extraction, dedicating most of my time to the latter. In addition to using NLTK, I explored word embedding algorithms, experimenting with several pre-trained models in spaCy, as well as gensim’s Word2Vec and Doc2Vec models. Although I couldn't get BERT to run successfully, the matrices from Word2Vec and Doc2Vec preserved more features and had lower dimensions compared to TF-IDF, providing a solid foundation for machine learning model training. I also used topic modeling with the gensim Doc2Vec model to interpret the dataset through topics and keywords.  
 
+A significant part of my contribution was researching model explainability and implementing it in our project. I developed a Python library that could be imported to run a loop, measuring the test and validation accuracies of each model. This systematic approach allowed us to efficiently compare the performance of different models and select the best one.
+Additionally, I collaborated with my teammate on exploratory data analysis (EDA) to uncover patterns and insights that informed our approach. My efforts in text processing, specifically with NLTK, SpaCy Gensim, were pivotal in building a robust preprocessing pipeline that enhanced the overall performance of our models.
+Through my focused contributions and collaborative efforts, we were able to determine that spaCy was superior for text processing and vector representation, and the SVA model was the most effective for detecting fake news. My work was instrumental in ensuring the success of our project, and I closely followed the directions set by our project lead, Zhongming Wu, to maintain alignment within the team.
+
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/fixed_github_commits.png" width="800"/>
 
 ## Bibliography
