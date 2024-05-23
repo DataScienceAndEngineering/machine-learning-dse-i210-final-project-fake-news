@@ -75,10 +75,29 @@ After data preprocessing, we can observe some data features:
   Our main goal was to build the best Machine Learning classifier that can accurately classify the data, which consists of news documents as real or fake. The process was quite challenging as we are dealing with complex text data. Inorder to accomplish this goal, our tasks were mainly focused on Data cleaning and Exploration, Text preprocessing using various NLP libraries, Feature extraction and building word vectors, Model building, training, and testing, Model Evaluation and Model Explainability.
 </p>
 <p>
-  After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition method. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were absent in True news data. 
+  After loading the data and initial analysis of the data using basic pandas dataframe inspection methods along with missingno library plots, we found that the data is clean with no null values as well as the classes are balance with 23481 Fake and 21417 Real news data. Therefore, we decided to start with Exploratory Data Analysis. But for this step, we need to clean and tokenzie the text documents using NLP libraries. We used nltk, Genism as well as Spacy libraries for text preprocessing and cleaning. Now, the data is cleaned and tokenized, we applied various visualization techniques to understand the distribution of data. To understand the distribution of most frequent words in both classes, we created a wordcloud along with Frequency bar charts of words. But the results indicated that almost all words occured equally in both classes. Therefore, we decided to move on with utilizing Spacy's entity recognition and part of speech tagging methods. The results were interesting in the fact that the Fake news data comprised of few interjections which included profanities which were absent in True news data. 
 </p>
 
+The plot below shows the top five words for each part of speech tag. These results are after preprocessing that removed stop words and various other commonly used symbols. As was already mentioned, fake news seems to have a lot more interjections (red) than true news, most likely as a tactic to get people's attention and spread further. Also, true news tends to use the word "said" a lot more often than fake news.
+
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/fixed_pos.png" width="800"/>
+
+The image below is a bar plot of the top five most common words for each entity. In this context an entity refers an object that could be:
+
+- DATE: Refers to specific dates or periods mentioned in the text.
+- PERSON: Individual people, including fictional and real names.
+- NORP: Nationalities or religious or political groups.
+- FAC: Buildings, airports, highways, bridges, etc.
+- ORG: Companies, agencies, institutions, etc.
+- GPE: Countries, cities, states.
+- LOC: Non-GPE locations, mountain ranges, bodies of water.
+- PRODUCT: Objects, vehicles, foods, etc. (Not services.)
+- EVENT: Named hurricanes, battles, wars, sports events, etc.
+- WORK_OF_ART: Titles of books, songs, etc.
+- LAW: Named documents made into laws.
+ -LANGUAGE: Any named language.
+
+Here we can see that fake news tends to mention people with a higher frequency compared to true news. In addition to that, true news mentions geo-political entities and people with the same frequency, while fake news tends to talk about people more than anything else.
 
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/figures/fixed_entity.png" width="800"/>
 
@@ -130,7 +149,7 @@ From the waterfall plot above, an idea on the features that the model relies on 
 
  The above summary plot picturizes how the model works in a global scale. It shows that 'said' and 'via' are two important word features that the model heavily relies on deciding which class a data belongs to.
 
-3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification.
+3. LIME on the other hand, is much better suited for localized interpretability and looking at individual predictions, especially in the context of text classification. In this image we can see the results of LIME analysis on a single news article. The words highlighted in orange are the terms that the model thinks contributes to deciding that the article is true, while the words in blue contribute to the article being classified as fake. The number next to the word indicates how much weight that word holds when deciding on the class prediction. We can see that based on the presence of certain words and their frequency, the model gives a prediction probability of 0.75 that this article is fake.
 
 ![LIME](figures/LIME.png)
  </p>
@@ -149,16 +168,14 @@ It was a great journey of analyzing a complex text data and retrieving insights.
 
 ## Attribution  
 
-Using the number and size of GitHub commits by author (bar graph), and the git hub visualizations of when the commits occurred. Using these measures each person should self-report how many code-hours of their work are visible in the repo with 2-3 sentences listing their contribution. Do not report any code hours that cannot be traced to commits. If you spend hours on a 2-line change of code or side-reading you did, you cannot report. If you do searches or research for the project that does not result in code, you must create notes in a markdown file (eg. in the project wiki) and the notes should be commensurate with the amount of work reported. Notes cannot be simply copy-pasted from elsewhere (obviously).
-
 <p>Abhina Premachandran Bindu - I did substantial work on researching on model explainability and implementing it for our project. Initially, I did a preliminary analysis of the data and build a classifier using nltk library. I also used gensim library to preprocess data and to build word2vec word embedding as our group decided to focus on different nlp libraries. I also build a python libary that can be imported to run a loop that measures the test and validation accuracies of each model to select the best one.  
 </p>
 
-<p>Esther Aruti - I contributed to exploring the dataset using the baseline NLTK, and then used spaCy to conclude that spaCy yielded better results. Additionally, I did the POS tagging and Entity recognition analysis along with their visualizations. I adjusted the entire dataset to remove the term 'reuters' which was impacting classification. I also contributed to doing the topic modeling with gensim. Finally, I created the LIME analysis for model interpretability. I also largely contributed to creating the presentation powerpoint slides. 
+<p>Esther Aruti - I contributed to exploring the dataset using the baseline NLTK, and then used spaCy to conclude that spaCy yielded better results. Additionally, I did the POS tagging and Entity recognition analysis along with their visualizations. I adjusted the entire dataset to remove the term 'reuters' which was impacting classification. I also contributed to doing the topic modeling with gensim by filtering out symbols and stop words as well as creating the visualization. Finally, I created the LIME analysis for model interpretability. I also largely contributed to creating the presentation powerpoint slides. 
 
 Zhongming Wu - I was involved in Data Cleaning, Text Preprocessing, and Feature Extraction, dedicating most of my time to the latter. In addition to using NLTK, I explored word embedding algorithms, experimenting with several pre-trained models in spaCy, as well as gensim’s Word2Vec and Doc2Vec models. Although I couldn't get BERT to run successfully, the matrices from Word2Vec and Doc2Vec preserved more features and had lower dimensions compared to TF-IDF, providing a solid foundation for machine learning model training. I also used topic modeling with the gensim Doc2Vec model to interpret the dataset through topics and keywords.  
 
-In our machine learning project focused on detecting fake news, I, Abhina Premachandran Bindu,Zhongming Wu,Esther Aruti played a crucial role in several key areas. Initially, I conducted a preliminary analysis of the data and built an initial classifier using the NLTK library. This early work helped set the foundation for our text processing pipeline. I also utilized the Gensim and SpaCy library to preprocess the data and developed word2vec word embeddings, as our group had decided to explore various NLP libraries to determine the most effective tools for our task.
+Mahbuba Jyoti - In our machine learning project focused on detecting fake news, I, Abhina Premachandran Bindu,Zhongming Wu,Esther Aruti played a crucial role in several key areas. Initially, I conducted a preliminary analysis of the data and built an initial classifier using the NLTK library. This early work helped set the foundation for our text processing pipeline. I also utilized the Gensim and SpaCy library to preprocess the data and developed word2vec word embeddings, as our group had decided to explore various NLP libraries to determine the most effective tools for our task.
 A significant part of my contribution was researching model explainability and implementing it in our project. I developed a Python library that could be imported to run a loop, measuring the test and validation accuracies of each model. This systematic approach allowed us to efficiently compare the performance of different models and select the best one.
 Additionally, I collaborated with my teammate on exploratory data analysis (EDA) to uncover patterns and insights that informed our approach. My efforts in text processing, specifically with NLTK, SpaCy Gensim, were pivotal in building a robust preprocessing pipeline that enhanced the overall performance of our models.
 Through my focused contributions and collaborative efforts, we were able to determine that spaCy was superior for text processing and vector representation, and the SVA model was the most effective for detecting fake news. My work was instrumental in ensuring the success of our project, and I closely followed the directions set by our project lead, Zhongming Wu, to maintain alignment within the team.
@@ -183,20 +200,18 @@ Through my focused contributions and collaborative efforts, we were able to dete
 
 **Topic Modeling**
 
-By using Gensim Ldamodel, it's convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to both fake and true articles split into two topics.  
-From the left panel, it's easy to observe the similarity of topics. From the right panel, we can observe the top ranking key word for each topic ordered by frequency.  
+Apart from our main analysis, we also used Gensim LDAmodel, which is a convenient to calculate the similarity of document topics. Below is the practice of topic modeling applied to both fake and true articles split into two topics.  
+From the left panel, it's easy to observe the similarity of topics. The further apart they are the more dissimilar they are. A larger circle indicates more distribution within that topic, and a smaller circle, less. From the right panel, we can observe the top ranking key word for each topic ordered by frequency. By adjusting the relevance metric slider at the top we can also see the words that were the least relevant to a particular topic (which could also provide some extra insight about the differences between the topics).
 
+The visualization below is the topic modeling results of the original dataset, containing both fake and real news, and with stopwords and irrelevant symbols removed. The large distance between the two circles indicates a clear dissimilarity between the two topics. This makes sense, as the two main topics that explain the most variation within the dataset are articles that contain fake news (and the key words associated with it) and real news. Based on the most relevant terms (and our previous explorations of the data) we can infer that the topic labeled "1" is the fake news and the topic labeled "2" is the real news.
 
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/faketrue_topic.gif" width="800"/>
 
-Here we show topic modeling on only the fake news split into four different topics. This would represent the main four topics found in fake articles.
+Here we show topic modeling on only the fake news, split into four different topics. This would represent the main four topics found in fake articles. Looking at the top terms of the largest topic, topic "1" we can see words like "trump", "said", and "police".
 
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/fake_topic.gif" width="800"/>
 
 
-Now, we can also look at topic modeling done on true news, also split into four topics. These would represent the four main topics in true articles.
+Now, we can also look at topic modeling done on true news, also split into four topics. These would represent the four main topics in true articles. We can see that in the largest topic, the word "said" is more relevant in comparison to "trump". This agrees with our previous findings that "said" tends to be more common in true news than in fake news.
 
 <img src="https://github.com/DataScienceAndEngineering/machine-learning-dse-i210-final-project-fake-news/blob/main/reports/true_topic.gif" width="800"/>
-
-
-
